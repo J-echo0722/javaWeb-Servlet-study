@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="servlet-01:Web exploded">
+    <output-path>$PROJECT_DIR$/servlet-01/target/servlet-01</output-path>
+    <root id="archive" name="servlet-01_Web exploded.war">
+      <element id="javaee-facet-resources" facet="servlet-01/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="servlet-01" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/servlet-01/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="servlet-01/web/Web2" />
+    </root>
+  </artifact>
+</component>
