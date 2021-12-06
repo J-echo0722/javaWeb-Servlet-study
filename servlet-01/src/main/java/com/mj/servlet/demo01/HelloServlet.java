@@ -20,7 +20,6 @@ public class HelloServlet extends HttpServlet {
         System.out.println("进入了 doGet 方法");
         // 响应流
         PrintWriter writer = resp.getWriter();
-
         writer.print("hello, Servlet");
     }
 

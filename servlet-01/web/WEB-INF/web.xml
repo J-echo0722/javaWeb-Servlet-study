@@ -62,4 +62,14 @@
         <url-pattern>/dispatcher</url-pattern>
     </servlet-mapping>
 
+    <!-- demo05 读取资源文件-->
+    <servlet>
+        <servlet-name>properties</servlet-name>
+        <servlet-class>com.mj.servlet.demo05.PropertiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>properties</servlet-name>
+        <url-pattern>/properties</url-pattern>
+    </servlet-mapping>
+
 </web-app>
