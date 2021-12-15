@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/servlet-01/servlet-01.iml" filepath="$PROJECT_DIR$/servlet-01/servlet-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet-02-cookie-session/servlet-02-cookie-session.iml" filepath="$PROJECT_DIR$/servlet-02-cookie-session/servlet-02-cookie-session.iml" />
     </modules>
   </component>
 </project>

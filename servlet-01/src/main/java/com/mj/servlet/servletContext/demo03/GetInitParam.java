@@ -1,4 +1,4 @@
-package com.mj.servlet.demo05;
+package com.mj.servlet.servletContext.demo03;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -6,29 +6,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 /**
  * @author : MaJ
- * @date : 2021/12/4
- * @description ：访问资源文件
+ * @date : 2021/12/3
+ * @description ：获取 web 应用的一些初始化参数
  */
-public class PropertiesServlet extends HttpServlet {
+public class GetInitParam extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletContext context = this.getServletContext();
-        System.out.println("进入啦");
-        InputStream is = context.getResourceAsStream("/classes/db.properties");
-
-        Properties prop = new Properties();
-        prop.load(is);
-        String username = prop.getProperty("username");
-        String pwd = prop.getProperty("pwd");
-        System.out.println(username + " : " + pwd);
-
-        resp.getWriter().println(username + " : " + pwd);
-        is.close();
+        String url = context.getInitParameter("url");
+        resp.getWriter().print("url：" + url);
     }
 
     @Override

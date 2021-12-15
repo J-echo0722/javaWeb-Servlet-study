@@ -1,3 +1,15 @@
+## web.xml 基础模板
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+</project>
+```
+
 
 ## demo01
 ```
@@ -36,5 +48,5 @@ eg. A请求B，B发现没有A请求的东西，去C拿，由B返回给A
 
 ## demo05
 ```
-利用 ServletContext 的特性，读取资源文件 db.properties（实际读取的是编译后的资源文件）
+利用 ServletContext 的特性，读取资源文件 db.properties（实际读取的是编译后的类路径下的资源文件）
 ```

@@ -1,6 +1,5 @@
-package com.mj.servlet.demo04;
+package com.mj.servlet.servletContext.demo02;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,19 +10,19 @@ import java.io.IOException;
 /**
  * @author : MaJ
  * @date : 2021/12/3
- * @description ：转发
+ * @description ：ServletContext 共享数据 ———— 存数据
  */
-public class Dispatcher extends HttpServlet {
+public class SetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // this.getInitParameter()          初始化配置
+        // this.getServletConfig()         Servlet 配置
+        // this.getServletContext()        Servlet 上下文
         ServletContext context = this.getServletContext();
-        System.out.println("进入了 Servlet demo04");
-        // 参数为转发的请求路径
-        RequestDispatcher requestDispatcher = context.getRequestDispatcher("/url");
-        // 调用 forward 实现请求转发
-        requestDispatcher.forward(req, resp);
 
-        // context.getRequestDispatcher("/url").forward(req,resp);      // 合起来写
+        // 将一个数据保存在 ServletContext 中
+        String userName = "MaJun";
+        context.setAttribute("userName", userName);
     }
 
     @Override

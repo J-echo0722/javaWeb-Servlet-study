@@ -1,4 +1,4 @@
-package com.mj.servlet.demo02;
+package com.mj.servlet.servletContext.demo02;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -10,19 +10,18 @@ import java.io.IOException;
 /**
  * @author : MaJ
  * @date : 2021/12/3
- * @description ：ServletContext 共享数据 ———— 存数据
+ * @description ：ServletContext 共享数据 ———— 取数据
  */
-public class SetServlet extends HttpServlet {
+public class GetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // this.getInitParameter()          初始化配置
-        // this.getServletConfig()         Servlet 配置
-        // this.getServletContext()        Servlet 上下文
         ServletContext context = this.getServletContext();
 
-        // 将一个数据保存在 ServletContext 中
-        String userName = "MaJun";
-        context.setAttribute("userName", userName);
+        String userName = (String) context.getAttribute("userName");
+
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("utf-8");
+        resp.getWriter().print("名字" + userName);
     }
 
     @Override
