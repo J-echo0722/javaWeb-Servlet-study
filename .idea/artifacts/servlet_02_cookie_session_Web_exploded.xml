@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="servlet-02-cookie-session" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.1" />
+        </element>
       </element>
     </root>
   </artifact>

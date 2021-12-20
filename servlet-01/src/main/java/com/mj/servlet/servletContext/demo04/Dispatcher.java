@@ -17,7 +17,6 @@ public class Dispatcher extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletContext context = this.getServletContext();
-        System.out.println("进入了 Servlet demo04");
         // 参数为转发的请求路径
         RequestDispatcher requestDispatcher = context.getRequestDispatcher("/url");
         // 调用 forward 实现请求转发

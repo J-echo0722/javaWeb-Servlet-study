@@ -14,22 +14,7 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 处理请求
-        // 单个参数
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        System.out.println(username + " : " + password);
-
-        // 多个参数
-        String[] hobbies = req.getParameterValues("hobby");
-        if (hobbies != null) {
-            for (String hobby : hobbies) {
-                System.out.println(hobby);
-            }
-        }
-
         req.getRequestDispatcher("/success.jsp").forward(req, resp);
-        // resp.sendRedirect(req.getContextPath() + "/success.jsp");
     }
 
     @Override
